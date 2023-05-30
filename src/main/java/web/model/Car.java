@@ -1,9 +1,16 @@
-package model;
+package web.model;
+
 
 public class Car {
     private String model;
     private String color;
     private String madeIn;
+
+    public Car(String model, String color, String madeIn) {
+        this.model = model;
+        this.color = color;
+        this.madeIn = madeIn;
+    }
 
     public String getModel() {
         return model;
@@ -26,12 +33,6 @@ public class Car {
     }
 
     public void setMadeIn(String madeIn) {
-        this.madeIn = madeIn;
-    }
-
-    public Car(String model, String color, String madeIn) {
-        this.model = model;
-        this.color = color;
         this.madeIn = madeIn;
     }
 

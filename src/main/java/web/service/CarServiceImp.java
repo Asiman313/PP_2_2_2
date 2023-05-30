@@ -1,7 +1,7 @@
-package service;
+package web.service;
 
-import model.Car;
 import org.springframework.stereotype.Component;
+import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class CarServiceImp implements CarService {
 
     @Override
     public List<Car> countCars(Integer count) {
-        if (count == null || count == 0) {
+        if (count == null || count == 0 || count > cars.size()) {
             return cars;
         }
         return cars.subList(0, count);
